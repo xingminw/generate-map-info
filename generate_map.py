@@ -64,6 +64,7 @@ def get_phase_link(map_dict, way_list, node_id):
                 sequenced_node_list += up_way_list
                 sequenced_node_list += down_way_list[::-1][1:]
             else:
+                print(way_list[way_idx + 1])
                 return None
             continue
 
@@ -72,6 +73,7 @@ def get_phase_link(map_dict, way_list, node_id):
         elif down_way_list[-1] == sequenced_node_list[-1]:
             sequenced_node_list += down_way_list[::-1][1:]
         else:
+            print(way_list[way_idx + 1])
             return None
 
     in_link_node_list = []
