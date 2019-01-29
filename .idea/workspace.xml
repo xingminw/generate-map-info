@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="331eccaf-91c6-4749-854e-0b2288190f2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/link_points.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/link_points.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/nodes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/nodes.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generate_map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-942">
-              <caret line="148" column="31" lean-forward="true" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+            <state relative-caret-position="99">
+              <caret line="180" column="45" lean-forward="true" selection-start-line="180" selection-start-column="45" selection-end-line="180" selection-end-column="45" />
               <folding>
                 <element signature="e#49#1133#0" />
                 <element signature="e#1162#1336#0" />
@@ -89,9 +86,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1943" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -178,7 +175,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42132866" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33041957" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -228,8 +225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generate_map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-942">
-          <caret line="148" column="31" lean-forward="true" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+        <state relative-caret-position="99">
+          <caret line="180" column="45" lean-forward="true" selection-start-line="180" selection-start-column="45" selection-end-line="180" selection-end-column="45" />
           <folding>
             <element signature="e#49#1133#0" />
             <element signature="e#1162#1336#0" />
