@@ -112,29 +112,36 @@ def generate_map():
 
         for phase in phases:
             phase_id = phase["phase_id"]
-            way_list = phase["ways"]
-            link_info = get_phase_link(map_info_dict, way_list, node_id)
-
-            if link_info is None:
-                print("Node", node_id, "phase", phase_id, "input info incorrect!")
-                continue
 
             in_link_id = str(node_id) + str(phase_id) + "0"
             out_link_id = str(node_id) + str(phase_id) + "1"
 
-            node_phase_link_dict[node_id][phase_id] = {"in_link_id": in_link_id, "out_link_id": out_link_id}
+            if "ways" in phase.keys():
+                way_list = phase["ways"]
+                link_info = get_phase_link(map_info_dict, way_list, node_id)
 
-            link_location_dict[in_link_id] = {"latitudes": [], "longitudes": []}
-            for temp_node_id in link_info[0]:
-                current_node = map_info_dict["node"][temp_node_id]
-                link_location_dict[in_link_id]["latitudes"].append(current_node["latitude"])
-                link_location_dict[in_link_id]["longitudes"].append(current_node["longitude"])
+                if link_info is None:
+                    print("Node", node_id, "phase", phase_id, "input info incorrect!")
+                    continue
 
-            link_location_dict[out_link_id] = {"latitudes": [], "longitudes": []}
-            for temp_node_id in link_info[1]:
-                current_node = map_info_dict["node"][temp_node_id]
-                link_location_dict[out_link_id]["latitudes"].append(current_node["latitude"])
-                link_location_dict[out_link_id]["longitudes"].append(current_node["longitude"])
+                node_phase_link_dict[node_id][phase_id] = {"in_link_id": in_link_id, "out_link_id": out_link_id}
+
+                link_location_dict[in_link_id] = {"latitudes": [], "longitudes": []}
+                for temp_node_id in link_info[0]:
+                    current_node = map_info_dict["node"][temp_node_id]
+                    link_location_dict[in_link_id]["latitudes"].append(current_node["latitude"])
+                    link_location_dict[in_link_id]["longitudes"].append(current_node["longitude"])
+
+                link_location_dict[out_link_id] = {"latitudes": [], "longitudes": []}
+                for temp_node_id in link_info[1]:
+                    current_node = map_info_dict["node"][temp_node_id]
+                    link_location_dict[out_link_id]["latitudes"].append(current_node["latitude"])
+                    link_location_dict[out_link_id]["longitudes"].append(current_node["longitude"])
+            else:
+                link_location_dict[in_link_id] = {"latitudes": phase["in_link"]["latitudes"],
+                                                  "longitudes": phase["in_link"]["longitudes"]}
+                link_location_dict[out_link_id] = {"latitudes": phase["out_link"]["latitudes"],
+                                                   "longitudes": phase["out_link"]["longitudes"]}
 
     # output all the information
     output_folder = "output"
