@@ -4,6 +4,7 @@ import json
 
 def load_map_data():
     map_file_name = "map_new.json"
+    # map_file_name = "DC_map.json"
     with open(map_file_name, encoding="utf8") as map_file:
         raw_map_dict = json.load(map_file)
 
@@ -38,6 +39,7 @@ def load_map_data():
 
 def load_node_data():
     node_info_file_name = "node_info.json"
+    # node_info_file_name = "node_info_DC.json"
     with open(node_info_file_name, "r") as node_info_file:
         node_info_dict = json.load(node_info_file)
     return node_info_dict
@@ -100,10 +102,12 @@ def generate_map():
     node_location_dict = {}
     link_location_dict = {}
     node_phase_link_dict = {}
+    link_name_dict = {}
 
     for element in node_info_dict["signal_node"]:
         node_id = element["node_id"]
         phases = element["phases"]
+        link_name_dict[node_id] = str(node_id) + ": " + element["name"]
 
         node_location_dict[node_id] = {"latitude": map_info_dict["node"][node_id]["latitude"],
                                        "longitude": map_info_dict["node"][node_id]["longitude"]}
@@ -142,10 +146,19 @@ def generate_map():
                 link_location_dict[out_link_id] = {"latitudes": phase["out_link"]["latitudes"],
                                                    "longitudes": phase["out_link"]["longitudes"]}
 
+    print(link_name_dict)
+
     # output all the information
     output_folder = "output"
     if not os.path.exists(output_folder):
         os.mkdir(output_folder)
+
+    node_name_file_name = "name.csv"
+    with open(os.path.join(output_folder, node_name_file_name), "w") as node_name_file:
+        node_name_file.write("node_id, Name\n")
+        for node_id in link_name_dict.keys():
+            lines_info = ",".join([str(val) for val in [node_id, link_name_dict[node_id]]]) + "\n"
+            node_name_file.write(lines_info)
 
     node_location_file_name = "nodes.csv"
     with open(os.path.join(output_folder, node_location_file_name), "w") as node_location_file:
