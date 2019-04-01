@@ -1,8 +1,54 @@
 {
   "signal_node": [
     {
+        "node_id": 2041276569,
+        "name": "Pittsfield Boulevard/Washtenaw Avenue",
+        "phases":
+        [
+            {
+                "phase_id": 6,
+                "ways": [442179669,442183103,442183102,393041604,193610570,393038020]
+            },
+            {
+                "phase_id": 7,
+                "ways": [8731416,442183098,411716610,411716616,393041604,442183102,442183103,442179669]
+            },
+            {
+                "phase_id": 5,
+                "ways": [530465297,193610572,442183100,411716610,442183098,8731416]
+            },
+            {
+                "phase_id": 2,
+                "ways": [530465297,193610572,442183100,411716610,193610570,393041604,442183102,442183103,442179669]
+            }
+        ]
+    }
+     ,{
+        "node_id": 62596831,
+        "name": "South University Avenue/Washtenaw Avenue",
+        "phases":
+        [
+            {
+                "phase_id": 6,
+                "ways": [489153791]
+            },
+            {
+                "phase_id": 4,
+                "ways": [442031975,234811371]
+            },
+            {
+                "phase_id": 2,
+                "ways": [489153791]
+            },
+            {
+                "phase_id": 8,
+                "ways": [234811371,442031975]
+            }
+        ]
+    }
+    ,{
       "node_id": 62515137,
-      "name": "Bonisteel & Fuller (A)",
+      "name": "Bonisteel Boulevard/Fuller Road",
       "phases": [
         {
           "phase_id": 1,
@@ -92,7 +138,7 @@
     },
     {
       "node_id": 62565682,
-      "name": "Washtenaw Avenue/Huron Parkway",
+      "name": "Huron Parkway/Washtenaw Avenue",
       "phases": [
         {
           "phase_id": 1,
@@ -198,7 +244,7 @@
     },
     {
       "node_id": 62578814,
-      "name": "Washtenaw Avenue/Hill Street",
+      "name": "Hill Street/Washtenaw Avenue",
       "phases": [
         {
           "phase_id": 1,
@@ -272,7 +318,7 @@
     },
     {
       "node_id": 62500824,
-      "name": "Plymouth-Huron",
+      "name": "Huron Parkway/Plymouth Road",
       "phases": [
         {
           "phase_id": 2,
@@ -359,7 +405,7 @@
     },
     {
       "node_id": 62532012,
-      "name": "Plymouth-Traverwood",
+      "name": "Traverwood Drive/Plymouth Road",
       "phases": [
         {
           "phase_id": 2,
@@ -391,7 +437,7 @@
     },
     {
       "node_id": 62606176,
-      "name": "Plymouth-Green",
+      "name": "Green Road/Plymouth Road",
       "phases": [
         {
           "phase_id": 1,
@@ -489,7 +535,7 @@
     },
     {
       "node_id": 62517097,
-      "name": "Washtenaw-Glenwood",
+      "name": "Platt Road/Washtenaw Avenue",
       "phases": [
         {
           "phase_id": 1,
@@ -587,7 +633,7 @@
     },
     {
       "node_id": 767530322,
-      "name": "Plymouth-Murfin",
+      "name": "Murfin Avenue/Plymouth Road",
       "phases": [
         {
           "phase_id": 1,
@@ -665,7 +711,7 @@
     },
     {
       "node_id": 62500567,
-      "name": "Plymouth-Barton",
+      "name": "Barton Drive/Plymouth Avenue",
       "phases": [
         {
           "phase_id": 1,
@@ -711,7 +757,7 @@
     },
     {
       "node_id": 62551869,
-      "name": "EastMedicalCenter-Fuller",
+      "name": "Maiden Lane/Fuller Road",
       "phases": [
         {
           "phase_id": 1,
@@ -825,7 +871,7 @@
     },
     {
       "node_id": 62477148,
-      "name": "Plymouth-Nixon",
+      "name": "Nixon Road/Plymouth Road",
       "phases": [
         {
           "phase_id": 1,
